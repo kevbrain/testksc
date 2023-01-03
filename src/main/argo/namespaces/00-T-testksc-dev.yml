@@ -1,0 +1,11 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: Trigger
+metadata:
+  name: testksc-dev-trigger
+  namespace: testksc-dev
+spec:
+  serviceAccountName: pipeline
+  bindings:
+    - ref: testksc-dev-triggerbinding
+  template:
+    ref: testksc-dev-triggertemplate

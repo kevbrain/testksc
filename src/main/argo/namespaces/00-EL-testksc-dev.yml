@@ -1,0 +1,9 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  name: testksc-dev-eventlistener
+  namespace: testksc-dev
+spec:
+  serviceAccountName: pipeline
+  triggers:
+    - triggerRef: testksc-dev-trigger
